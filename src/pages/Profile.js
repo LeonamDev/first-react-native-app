@@ -1,10 +1,12 @@
 import React from 'react'
-import {Button,View, Image, Text} from 'react-native';
+import axios from 'axios';
+import {Button,View, Image, Text, FlatList, StyleSheet} from 'react-native';
 
 
 
 const Profile = ({navigation}) =>{
-    
+
+
     const user = navigation.getParam('user');
     const handleClick = () => {
         navigation.navigate('Main');
@@ -18,7 +20,6 @@ const Profile = ({navigation}) =>{
             />
             <Text style={{textAlign: 'center'}}>{user.name}</Text>
             <Text></Text>
-
             <Button
             onPress={() => handleClick()}
             title="Sair"
@@ -28,5 +29,17 @@ const Profile = ({navigation}) =>{
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+     flex: 1,
+     paddingTop: 22
+    },
+    item: {
+      padding: 10,
+      fontSize: 18,
+      height: 44,
+    },
+  })
 
 export default Profile;

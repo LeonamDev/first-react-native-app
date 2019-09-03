@@ -36,6 +36,13 @@ const Main = ({navigation}) => {
             color="#841584"
             accessibilityLabel="Learn more about this purple button"
           />
+
+       <Button
+            onPress={() => navigation.navigate('BtcPrice')}
+            title="Preço do Bitcoin"
+            color="#847484"
+            accessibilityLabel="Learn more about this purple button"
+          />
        </View>
   
   );
